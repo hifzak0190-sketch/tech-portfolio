@@ -99,7 +99,7 @@ export default function Admin() {
       {
         title,
         description,
-        TechStack: techStack,
+        tech_stack: techStack,
         github,
         demo,
       },
