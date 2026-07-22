@@ -34,15 +34,17 @@ export default function Admin() {
     }
   }
 
- const { data, error } = await supabase
-  .from("projects")
-  .select("*")
-  .order("id", { ascending: false });
+ async function fetchProjects() {
+  const { data, error } = await supabase
+    .from("projects")
+    .select("*")
+    .order("id", { ascending: false });
 
-console.log("Projects:", data);
-console.log("Error:", error);
+  console.log("Projects:", data);
+  console.log("Error:", error);
 
-setProjects(data || []);
+  setProjects(data || []);
+}
 
   async function updateProfile() {
     const { error } = await supabase
