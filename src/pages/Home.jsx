@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
 
@@ -96,21 +97,21 @@ export default function Home() {
               Building Modern Web Applications with React & Supabase
             </p>
 
-            <a href="/admin">
-              <button
-                style={{
-                  background: "white",
-                  color: "#4f46e5",
-                  border: "none",
-                  padding: "12px 24px",
-                  borderRadius: "12px",
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
-              >
-                Admin Panel
-              </button>
-            </a>
+            <Link to="/admin">
+  <button
+    style={{
+      background: "white",
+      color: "#4f46e5",
+      border: "none",
+      padding: "12px 24px",
+      borderRadius: "12px",
+      cursor: "pointer",
+      fontWeight: "bold",
+    }}
+  >
+    Admin Panel
+  </button>
+</Link>
           </div>
         ))}
 
