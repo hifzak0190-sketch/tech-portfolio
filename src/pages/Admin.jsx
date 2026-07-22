@@ -11,6 +11,7 @@ export default function Admin() {
   const [techStack, setTechStack] = useState("");
   const [github, setGithub] = useState("");
   const [demo, setDemo] = useState("");
+  const [projects, setProjects] = useState([]);
   useEffect(() => {
   loadProfile();
   async function fetchProjects() {
