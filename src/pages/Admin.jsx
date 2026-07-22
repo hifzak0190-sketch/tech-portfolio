@@ -124,7 +124,7 @@ export default function Admin() {
       .update({
         title,
         description,
-        TechStack: techStack,
+        tech_stack: techStack,
         github,
         demo,
       })
@@ -165,7 +165,7 @@ export default function Admin() {
     setEditingId(project.id);
     setTitle(project.title || "");
     setDescription(project.description || "");
-    setTechStack(project.TechStack || "");
+    setTechStack(project.tech_stack || "");
     setGithub(project.github || "");
     setDemo(project.demo || "");
 
