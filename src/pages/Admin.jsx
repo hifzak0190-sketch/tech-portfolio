@@ -34,17 +34,14 @@ export default function Admin() {
     }
   }
 
- async function fetchProjects() {
-  const { data, error } = await supabase
-    .from("projects")
-    .select("*")
-    .order("id", { ascending: false });
+  async function fetchProjects() {
+    const { data } = await supabase
+      .from("projects")
+      .select("*")
+      .order("id", { ascending: false });
 
-  console.log("Projects:", data);
-  console.log("Error:", error);
-
-  setProjects(data || []);
-}
+    setProjects(data || []);
+  }
 
   async function updateProfile() {
     const { error } = await supabase
@@ -209,7 +206,7 @@ export default function Admin() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#0f172a",
+        background: "#eceff5",
         padding: "40px",
         color: "white",
       }}
@@ -218,9 +215,10 @@ export default function Admin() {
         style={{
           maxWidth: "900px",
           margin: "auto",
-          background: "#1e293b",
+          background: "#6cb3d9",
           padding: "30px",
           borderRadius: "20px",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
         }}
       >
         <h1
